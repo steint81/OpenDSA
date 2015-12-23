@@ -8,87 +8,115 @@ $(document).ready(function() {
       interpret = config.interpreter, // get the interpreter
       code = config.code;
   var av = new JSAV(av_name);
+ 
+  var ptop = 230;
+  
   // Slide 1
-  av.umsg(interpret("av_c1"));
-  var pseudo = av.code(code);
+  av.umsg(interpret("sc1"));
+  var pseudo = av.code(code[0]); 
   var arr = av.ds.array(theArray, {indexed: true});
-  var label = av.label("arr", {before: arr, left: 350, top: 150});
+  var label = av.label("arr", {before: arr, left: 350, top: 145});
   label.show();
   av.displayInit();
-  // Slide 2
-  var arrcopyn3 = av.ds.array(theArray, {left: 40, top:  120, indexed: false});
-  var labeln3 = av.label("n=3", {before: arrcopyn3, left: 5, top: 120});
-  av.umsg(interpret("av_c2"));
+
+  av.umsg(interpret("sc1_1"));
   av.step();
+  // Slide 2
+  av.umsg(interpret("sc2"));
+  var pseudo2 = av.code($.extend({lineNumbers: false, top: ptop, left: 260}, code[4]));
+  pseudo2.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
+  pseudo.highlight("sig");
+  av.step();
+
   // Slide 3
-  av.umsg(interpret("av_c3"));
+  av.umsg(interpret("sc3"));
+  pseudo.unhighlight("sig");
   pseudo.highlight("bc");
   av.step();
+
   // Slide 4
-  av.umsg(interpret("av_c4"));
+  av.umsg(interpret("sc4"));
   pseudo.unhighlight("bc");
   pseudo.highlight("rc");
+  pseudo2.highlight("rc");
   av.step();
+
   // Slide 5
-  var arrcopyn2 = av.ds.array(theArray, {left: 40, top:  75, indexed: false});
-  var labeln2 = av.label("n=2", {before: arrcopyn2, left: 5, top: 75});
-  av.umsg(interpret("av_c5"));
+  av.umsg(interpret("sc5"));
+  pseudo2.css([0,1,2,3,4,5,6],{"border-width": "0px"});
+  var pseudo3 = av.code($.extend({lineNumbers: false, top: ptop + 20, left: 290}, code[3]));
+  pseudo3.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
   pseudo.unhighlight("rc");
+  pseudo2.unhighlight("rc");
   pseudo.highlight("sig");
+  pseudo3.highlight("rc");
   av.step();
+
   // Slide 6
-  av.umsg(interpret("av_c6"));
+  av.umsg(interpret("sc6"));
   av.step();
+
   // Slide 7
-  var arrcopyn1 = av.ds.array(theArray, {left: 40, top:  30, indexed: false});
-  var labeln1 = av.label("n=1", {before: arrcopyn2, left: 5, top: 30});
-  av.umsg(interpret("av_c7"));
+  av.umsg(interpret("sc7"));
+  pseudo3.css([0,1,2,3,4,5,6],{"border-width": "0px"});
+  var pseudo4 = av.code($.extend({lineNumbers: false, top: ptop + 40, left: 320}, code[2]));
+  pseudo4.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
   pseudo.unhighlight("sig");
+  pseudo3.unhighlight("rc");
   pseudo.highlight("rc");
+  pseudo4.highlight("rc");
   av.step();
+
   // Slide 8
-  av.umsg(interpret("av_c8"));
+  av.umsg(interpret("sc8"));
   pseudo.unhighlight("rc");
   pseudo.highlight("sig");
   av.step();
+
   // Slide 9
-  av.umsg(interpret("av_c9"));
+  av.umsg(interpret("sc9"));
   pseudo.unhighlight("sig");
   pseudo.highlight("rc");
   av.step();
+
   // Slide 10
-  av.umsg(interpret("av_c10"));
+  av.umsg(interpret("sc10"));
   pseudo.unhighlight("rc");
+  pseudo4.unhighlight("rc");
   pseudo.highlight("bcac");
+  pseudo4.css([0,1,2,3,4,5,6],{"border-width": "0px"});
+  var pseudo5 = av.code($.extend({lineNumbers: false, top: ptop + 60, left: 430}, code[1]));
+  pseudo5.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
+  pseudo5.highlight("bcac");
   av.step();
+
   // Slide 11
-  av.umsg(interpret("av_c11"));
+  av.umsg(interpret("sc11"));
   pseudo.unhighlight("bcac");
   pseudo.highlight("rc");
-  arrcopyn1.highlight([0]);
-  //arr.highlight([0]);
+  pseudo5.hide();
+  pseudo4.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
   av.step();
+
   // Slide 12
-  av.umsg(interpret("av_c12"));
-  av.step();
-  // Slide 13
-  arrcopyn1.hide();
-  labeln1.hide();
-  av.umsg(interpret("av_c13"));
+  av.umsg(interpret("sc12"));
   arr.unhighlight([0]);
   arr.addClass([0], "unused");
-  arrcopyn2.highlight([1]);
+  pseudo4.hide();
+  pseudo3.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
   av.step();
-  // Slide 14
-  arrcopyn2.hide();
-  labeln2.hide();
-  av.umsg(interpret("av_c14"));
+
+  // Slide 13
+  av.umsg(interpret("sc13"));
   arr.unhighlight([1]);
   arr.addClass([1], "unused");
-  arrcopyn3.highlight([2]);
+  pseudo3.hide();
+  pseudo2.css([0,1,2,3,4,5,6],{"border-width": "1px", "border-color": "black"});
   av.step();
-  arrcopyn3.hide();
-  labeln3.hide();
+
+  // Slide 14
+  av.umsg(interpret("sc14"));
   arr.addClass([2], "unused");
+  pseudo2.hide();
   av.recorded();
 });

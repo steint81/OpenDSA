@@ -2,37 +2,35 @@
   height: 270px;
 }
 
+#recurTraceFactCON{
+  height: 500px;
+}
+
+#recurTraceFactCON .jsavcode.bordercolored {
+  border-width: 3px;
+  border-color: red;  
+}
+
 #recurTraceSumCON{
-  height: 325px;
+  height: 530px;
 }
 
 #recurTraceSumCON .jsavoutput.jsavline {
   height: 30px;
 }
 
-#recurTraceFactCON{
-  height: 580px;
-}
-
-#recursionTrcSum2CON{
-  height: 350px;
-}
-
-#recursionTrcDmnCON{
+#recurTraceDmnPrntCON {
   height: 450px;
 }
 
-#recursionTrcDmnPrntCON {
-  height: 450px;
-}
-
-#recursionTrcDmnCntCON{
+#recurTraceDmnCntCON{
   height: 420px;
 }
 
-#recursionTrcTOHCON {
+#recurTraceTOHCON {
   height: 600px;
 }
+
 
 .dominocolor{
   fill:grey;

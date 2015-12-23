@@ -35,7 +35,7 @@ You will begin to develop confidence about how recursion works.
 
 You know that information can be passed in (using a function
 parameter) from one recursive call to another, on ever smaller
-problems, until a base case is reached.
+problems, until a base case is reached in the winding phase.
 Then, a return value is passed back as the series of recursive calls
 unwinds.
 Sometimes people forget about the "unwinding" phase.
@@ -44,64 +44,44 @@ Sometimes people forget about the "unwinding" phase.
    :output: show 
 
 
+During the winding phase, any parameter passed through the recursive
+call flows forward until the base case is reached.
+During the unwinding phase, the return value of the function (if there
+is one) flows backwards to the calling copy of the function.
+In the following example, a recursive function to compute factorial
+has information flowing forward during the winding phase, and backward
+during the unwinding phase.
+
+.. inlineav:: recurTraceFactCON ss
+   :output: show 
+
+The recursive function may have information flow for more than one parameter. For example, a recursive
+function that sums the values in an array recursively may pass the array itself 
+and the index through the recursive call in the winding phase and returns back the summed value so far
+in the unwinding phase.
+
+.. inlineav:: recurTraceSumCON ss
+   :output: show
+
+
 A Domino Analogy
 ~~~~~~~~~~~~~~~~
 
 .. inlineav:: recurTraceDmnCON ss
    :output: show 
 
-After modeling the domino effect recursively, the two steps
-in the previous visualization becomes a template solution for general
-linear recursive questions. If we think of tipping over each
-domino as performing a further step of computation toward
-the final solution, then this template is capable of solving
-all linear recursive problems. The rules of thumb toward a
-linear recursive solution can now be summarized as follows:
+This recursive model for the domino effect can be used as a template
+for the solution to all linear recursive functions.
+Think of tipping over each domino as performing a further step
+of computation toward the final solution.
+Remember these rules:
 
 1. Since the first domino has to be tipped over manually,
-the solution for base case is computed non-recursively.
+the solution for the base case is computed non-recursively.
 
-2. For any other domino, before any given domino can be tipped over,
-all preceding dominos have to be tipped over first.
+2. Before any given domino can be tipped over,
+all preceding dominos have to be tipped over.
    
-.. inlineav:: recurTraceSumCON ss
-   :output: show
-
-|
-
-.. inlineav:: recurTraceFactCON ss
-   :output: show 
-
-|
-
-As you trace the code, you should observe several things.
-Let's use the array summing function again for an example.
-
-.. inlineav:: recurTraceSum2CON ss
-   :output: show 
-
-Starting at the base case, you have a value that is then used to solve the call
-from the function that called the base case, which is used to solve the call that
-called the call that called the base case, and so forth. Basically, the solution is
-being built up, until finally, you reach the original call, and the final solution is
-arrived at, having been built up from the base case.
-
-Whenever the return statement of the recursive call has no more work to do
-AFTER the recursive call, the function is said to be tail-recursive.
-
-The next visualization shows how we can use the
-Domino effect to recursively print the integers from 1 to N.
-
-.. inlineav:: recurTraceDmnPrntCON ss
-   :output: show 
-
-
-This next visualization shows how we can use the Domino technique to
-recursively count the number of digits in an integer.
-
-.. inlineav:: recurTraceDmnCntCON ss
-   :output: show 
-
 
 Towers of Hanoi
 ~~~~~~~~~~~~~~~
@@ -181,9 +161,6 @@ This next slideshow explains the solution to the Towers of Hanoi problem.
 .. odsascript:: AV/RecurTutor/recurTraceWindCON.js
 .. odsascript:: AV/RecurTutor/recurTraceSumCON.js
 .. odsascript:: AV/RecurTutor/recurTraceFactCON.js
-.. odsascript:: AV/RecurTutor/recurTraceSum2CON.js
 .. odsascript:: AV/RecurTutor/recurTraceDmnCON.js
-.. odsascript:: AV/RecurTutor/recurTraceDmnPrntCON.js
-.. odsascript:: AV/RecurTutor/recurTraceDmnCntCON.js
 .. odsascript:: AV/RecurTutor/recurTraceTOHCON.js
 .. odsascript:: AV/RecurTutor/TOHfigCON.js
