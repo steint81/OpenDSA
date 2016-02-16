@@ -1,5 +1,5 @@
 {
-  "title": "Example of Simple Book",
+  "title": "Simple example of an Array Scramble",
   "build_dir": "Books",
   "code_dir": "SourceCode/",
   "code_lang": {
@@ -22,8 +22,8 @@
         "sections": {}
       }
     },
-    "A Simple Example": {
-      "Development/XXX": {
+    "A Simple Example of scrambling an array": {
+      "Development/NathanArrayScramble.": {
         "long_name": "Simple Example of Using a Slide Show in a Book Module",
         "sections": {}
       }
