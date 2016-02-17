@@ -22,8 +22,8 @@
         "sections": {}
       }
     },
-    "A Simple Example of scrambling an array": {
-      "Development/NathanArrayScramble.": {
+    "A Simple Example of scrambling an array swapping each element at least once": {
+      "Development/Taylor/TaylorArrayScramble.": {
         "long_name": "Simple Example of Using a Slide Show in a Book Module",
         "sections": {}
       }

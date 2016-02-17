@@ -274,6 +274,9 @@ PL2: min
 NathanArrayScramble: min
 	python $(CONFIG_SCRIPT) config/NathanArrayScramble.json
 
+TaylorArrayScramble: min
+	python $(CONFIG_SCRIPT) config/TaylorArrayScramble.json
+
 uwosh-taylor: min
 	python $(CONFIG_SCRIPT) config/uwosh-taylor.json
 

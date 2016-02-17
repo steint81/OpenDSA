@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     JSAV.init();
 
-    var av = new JSAV("TaylorScrambler");
+    var av = new JSAV("TaylorArrayScramble");
     var theArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,];
     var arr = av.ds.array(theArray, {indexed: true});
     av.umsg("Starting Array");
