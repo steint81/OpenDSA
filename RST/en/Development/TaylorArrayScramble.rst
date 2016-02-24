@@ -20,5 +20,7 @@ be swapped unsorting the array.
 .. inlineav:: TaylorArrayScramble ss
    :output: show
 
+.. avembed:: Exercises/AlgAnal/AnalPrelimSumm.html ka 
+   :module: TaylorArrayScramble
 
 .. odsascript:: AV/Development/Taylor/TaylorArrayScramble.js
