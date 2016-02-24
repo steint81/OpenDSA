@@ -208,6 +208,9 @@ CS3114F15: min
 CS3114notes: min
 	python $(CONFIG_SCRIPT) -s config/CS3114notes.json
 
+DFAGroupProject: min
+	python $(CONFIG_SCRIPT) -s config/DFAGroupProject.json
+
 CS3114mynotes: min
 	python $(CONFIG_SCRIPT) -s config/CS3114mynotes.json
 
@@ -288,6 +291,9 @@ Dev: min
 
 Everything: min
 	python $(CONFIG_SCRIPT) config/Everything.json
+
+NathanTaylorDFA: min
+	python $(CONFIG_SCRIPT) config/NathanTaylorDFA.json
 
 AlgAnalTest: min
 	python $(CONFIG_SCRIPT) config/AlgAnalTest.json
