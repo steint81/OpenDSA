@@ -292,8 +292,8 @@ Dev: min
 Everything: min
 	python $(CONFIG_SCRIPT) config/Everything.json
 
-NathanTaylorDFA: min
-	python $(CONFIG_SCRIPT) config/NathanTaylorDFA.json
+DFABenson: min
+	python $(CONFIG_SCRIPT) config/DFABenson.json
 
 AlgAnalTest: min
 	python $(CONFIG_SCRIPT) config/AlgAnalTest.json
