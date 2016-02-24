@@ -16,15 +16,9 @@
 "JXOP-debug": "true"
 },
 "chapters": {
-"Preface": {
-"Intro": {
-"long_name": "How to Use this System",
-"sections": {}
-}
-},
-"A simple example of making a DFA": {
+"DFAs": {
 "Development/DFABenson": {
-"long_name": "Simple Example of Using a Slide Show in a Book Module",
+"long_name": "What is a DFA?",
 "sections": {}
 }
 }
