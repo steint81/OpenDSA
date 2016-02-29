@@ -73,4 +73,7 @@ Now that we have added a second state to our diagram, two additional lines must 
 .. odsascript:: AV/Development/DFABensonStage5.js
 
 
+Practice Exercise
+-----------------
 
+.. avembed:: Exercises/Development/edit-KA2.html ka
