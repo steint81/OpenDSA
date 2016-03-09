@@ -3,21 +3,13 @@ var dfa = new DFA(jsav);
 var textArray = [];
 
 var state1 = dfa.addState(3, 1, "#ffddff", false);
-var state2 = dfa.addState(5, 2, "#ffddff", false);
-var state3 = dfa.addState(7, 1, "#ffddff", false);
-var state4 = dfa.addState(5, 3, "#ffddff", true);
+var state2 = dfa.addState(5, 1, "#ffddff", false);
 
-state1.addNextState(state1, ["0"]);
-state1.addNextState(state2, ["1"]);
 
-state2.addNextState(state1, ["0"]);
-state2.addNextState(state3, ["1"]);
+state1.addNextState(state1, ["b"]);
+state1.addNextState(state2, ["a"]);
 
-state3.addNextState(state1, ["0"]);
-state3.addNextState(state4, ["1"]);
-
-state4.addNextState(state1, ["0"]);
-state4.addNextState(state4, ["1"]);
+state2.addNextState(state2, ["b"]);
 
 // dfa.draw(jsav);
 jsav.label("DFA Test", {top: 10, left: 500}).css({"font-size": "150%"});

@@ -22,7 +22,6 @@ state4.addNextState(state4, ["1"]);
 // dfa.draw(jsav);
 jsav.label("DFA Test", {top: 10, left: 500}).css({"font-size": "150%"});
 jsav.displayInit();
-
 /*function testString() {
   var input = prompt("Enter a string:", "1010111");
   if (input != null) {
