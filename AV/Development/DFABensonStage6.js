@@ -1,4 +1,4 @@
-var jsav = new JSAV("DFABenson3");
+var jsav = new JSAV("DFABenson5");
 var dfa = new DFA(jsav);
 var textArray = [];
 var state1 = dfa.addState(3, 1, "#ffddff", false);
@@ -8,9 +8,13 @@ var state2 = dfa.addState(5, 1, "#ffddff", false);
 state1.addNextState(state1, ["b"]);
 state1.addNextState(state2, ["a"]);
 
+state2.addNextState(state2, ["b"]);
+state2.addNextState(state1, ["a"]);
+
 // dfa.draw(jsav);
 jsav.label("DFA Test", {top: 10, left: 500}).css({"font-size": "150%"});
 jsav.displayInit();
+
 /*function testString() {
   var input = prompt("Enter a string:", "1010111");
   if (input != null) {

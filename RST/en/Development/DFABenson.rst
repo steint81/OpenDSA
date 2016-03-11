@@ -72,6 +72,31 @@ Now that we have added a second state to our diagram, two additional lines must 
 
 .. odsascript:: AV/Development/DFABensonStage5.js
 
+Step 5
+~~~~~~~~~~~
+
+Now the line for A must be drawn. A line going from state 2 back to state 1 musty be drawn for A since our goal is to have an even number of As in our language.
+
+.. inlineav:: DFABenson5 ss
+    :output: show
+
+
+.. odsascript:: AV/Development/DFABensonStage6.js
+
+Step 6
+~~~~~~~~~~~
+
+This is your completed DFA for the language of Even-As.
+
+
+.. inlineav:: DFABenson6 ss
+    :output: show
+
+
+.. odsascript:: AV/Development/DFABensonStage7.js
+
+
+
 
 Practice Exercise
 -----------------
