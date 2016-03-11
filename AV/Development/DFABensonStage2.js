@@ -1,10 +1,8 @@
-var jsav = new JSAV("DFABenson1");
+var jsav = new JSAV("DFABensonStage2");
 var dfa = new DFA(jsav);
 var textArray = [];
 
 var state1 = dfa.addState(3, 1, "#ffddff", false);
-
-dfa.draw(jsav);
 jsav.label("DFA Test", {top: 10, left: 500}).css({"font-size": "150%"});
 jsav.displayInit();
 /*function testString() {

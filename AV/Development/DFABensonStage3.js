@@ -1,4 +1,4 @@
-var jsav = new JSAV("DFABenson2");
+var jsav = new JSAV("DFABensonStage3");
 var dfa = new DFA(jsav);
 var textArray = [];
 

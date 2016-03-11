@@ -1,0 +1,17 @@
+#jsav {
+      width: 98%;
+      position: relative;
+    }
+    .jsavcounter {
+      position: absolute;
+      top: 15px;
+    }
+    .jsavlabel {
+      font-size: 80%;
+      text-align: center;
+      margin: -6px 0 -10px 0;
+      z-index: 150;
+    }
+    .jsavarray {
+      top: 25px;
+    }
