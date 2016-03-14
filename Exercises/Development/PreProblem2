@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html data-require="math">
   <head>
-    <title>Understanding How to Make a DFA</title>
+    <title>Understanding How to Make a DFA Part 2</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     <script src="../../khan-exercises/local-only/main.js" ></script>
   </head>
 
   <body data-height="675" data-width="950">
   	<script>
-		  	var questions = ["DFA can have more than one start state.", "", "", "", ""];
-		  	var solutions = ["False", "", "", "", ""];
+		  	var questions = ["DFA can have more than one start state.", "", ""];
+		  	var solutions = ["False", "", ""];
+		  	var options = [["", "", ""],["", "", ""],["", "", ""]];
 		  	
-		  	var curQuestion = Math.Random() * 4;
+		  	var curQuestion = Math.Random() * 2;
   	</script>
     <div class="exercise">
       <div class="problems">
-        <div id="AnalProblemTF1p">
+        <div id="PreProblem2p">
           <p class="problem">Answer TRUE or FALSE.</p>
           <p class="question"><var>questions[curQuestion]</var></p>
           <div class="solution"><var>solutions[curQuestion]</var></div>
           <ul class="choices" data-category="true">
-            <li>True</li>
-            <li>False</li>
+            <var>options[curQuestion]</var>
           </ul>
           <div class="hints">
             <p></p>
