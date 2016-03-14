@@ -18,6 +18,5 @@ state3.addNextState(state4, ["b"]);
 
 state4.addNextState(state1, ["a"]);
 state4.addNextState(state4, ["b"]);
-//dfa.draw(jsav);
 jsav.displayInit();
 jsav.recorded();

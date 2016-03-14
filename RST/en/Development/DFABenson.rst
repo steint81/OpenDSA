@@ -30,7 +30,7 @@ states that determine if a string is accepted or not. For example,
 Step 1
 ~~~~~~~~~~~~
 
-For our sample language, we are going to use an alphabet of{a,b} and the language requires a string to have an even number of A's. Our first step will be 
+For our sample language, we are going to use an alphabet of{a,b} and the language requires a string to have an even number of A's as well as an even number of B's. Our first step will be 
 to draw a start state.
 
 .. inlineav:: DFABensonStage2 dgm
@@ -42,7 +42,7 @@ to draw a start state.
 Step 2
 ~~~~~~~~~~~~
 
-From each state in the DFA model, you must have one and only 1 line leaving that state for each letter in the Languages alphabet(which is {a,b} in this langauge). So, since our goal for this language is to have an even number of A's in every string, state one can also be initialized as a final state. Also, since the number of B's are irrelevant, a line from state 1 for b will wrap around and point back to the same state like so.
+From each state in the DFA model, you must have one and only 1 line leaving that state for each letter in the Languages alphabet(which is {a,b} in this langauge). So, since our goal for this language is to have an even number of A's and B's in every string, state one can also be initialized as a final state. Next, for our first line we draw, we will need to add another state for our a line to go to, like so.
 
 .. inlineav:: DFABensonStage3 dgm
 	:output: show
@@ -53,7 +53,7 @@ From each state in the DFA model, you must have one and only 1 line leaving that
 Step 3
 ~~~~~~~~~~~
 
-Now it is time to draw the line exiting the start state for A. Since a odd number of A's is required, having an a read in as the next input from this string will cause it to have at that moment, an odd number of A's, so you must go to a new state if an A is read. 
+Now it is time to draw the line exiting the start state for B. Since the case for B is going to be the same for A, we will need to draw a line for b, but this time we will need to add another new state leading away from our start state for b. 
 
 
 .. inlineav:: DFABensonStage4 dgm
@@ -65,7 +65,7 @@ Now it is time to draw the line exiting the start state for A. Since a odd numbe
 Step 4
 ~~~~~~~~~~~
 
-Now that we have added a second state to our diagram, two additional lines must be drawn leaving that state, one for A and one for B. Again, since the B's read in are irrelavant for the target language, another line leading back to the same state will be drawn for any additional B's, like so. 
+Now beginning with our second state that was added, we will need to draw a line from state 2 leading back to the start state for A, since after another A we will be back at an even number of A's, and currently the number of B's is still sitting at an even number if we come from the start state. 
 
 .. inlineav:: DFABensonStage5 dgm
 	:output: show
@@ -76,7 +76,7 @@ Now that we have added a second state to our diagram, two additional lines must 
 Step 5
 ~~~~~~~~~~~
 
-Now the line for A must be drawn. A line going from state 2 back to state 1 musty be drawn for A since our goal is to have an even number of As in our language.
+As for the B's, if we are sitting in state 2, we must draw a line to another new state which will keep our count of both A and B currently staying at a odd number for both. 
 
 .. inlineav:: DFABensonStage6 dgm
     :output: show
@@ -87,7 +87,7 @@ Now the line for A must be drawn. A line going from state 2 back to state 1 must
 Step 6
 ~~~~~~~~~~~
 
-This is your completed DFA for the language of Even-As.
+Now from State 3, a line for B can be drawn back to the start state because the only way to get to this state would be having an even number of A's, and an odd number of B's, so having one more B will take us back to having an even number of A's and B's
 
 
 .. inlineav:: DFABensonStage7 dgm
@@ -96,6 +96,40 @@ This is your completed DFA for the language of Even-As.
 
 .. odsascript:: AV/Development/DFABensonStage7.js
 
+Step 7
+~~~~~~~~~~~
+
+A line from state 3 for A must be drawn now, and this one is similar to the one coming from state 3 for its B, because another A at this point will get us to an odd number of both A's and B's
+
+
+.. inlineav:: DFABensonStage8 dgm
+    :output: show
+
+
+.. odsascript:: AV/Development/DFABensonStage8.js
+
+Step 8
+~~~~~~~~~~~
+
+Now for the state 4 we need to draw the A and B lines for this new state. First for B, we will return to state 2 since that will take us to a state where B is an even number and A is still in an odd number, like so. 
+
+
+.. inlineav:: DFABensonStage9 dgm
+    :output: show
+
+
+.. odsascript:: AV/Development/DFABensonStage9.js
+Step 9
+~~~~~~~~~~~
+Finally, the last line we will draw coming from state 4 will be for A, which will go in the opposite direction of the previous line we drew for B, taking it to the state which will have an even number of A's but an odd number of B's, and this will finish off our DFA for the language of Even-a Even-b.
+
+
+
+.. inlineav:: DFABensonStage10 dgm
+    :output: show
+
+
+.. odsascript:: AV/Development/DFABensonStage10.js
 
 
 
