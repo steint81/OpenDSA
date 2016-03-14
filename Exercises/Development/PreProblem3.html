@@ -9,7 +9,7 @@
   <body data-height="675" data-width="950">
   	<script>
 		  	var question = "";
-		  	
+		  	var chosenAnswer = 4;
 		  	var curQuestion = Math.Random() * 2;
 		  	
 		  	var generateExp = function(){
@@ -58,7 +58,7 @@
           <p class="problem">Answer TRUE or FALSE.</p>
           <p class="question">Where does the following expression end? <var>generateExp()</var></p>
           <div class="solution"><var>solve()</var></div>
-          
+          <div id="chosenAnswer"><var>chosenAnswer</var></div>
           <div class="hints">
             <p></p>
           </div>
