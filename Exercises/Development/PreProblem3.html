@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html data-require="math">
+  <head>
+    <title>Understanding How to Make a DFA Part 3</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+    <script src="../../khan-exercises/local-only/main.js" ></script>
+  </head>
+
+  <body data-height="675" data-width="950">
+  	<script>
+		  	var question = "";
+		  	var chosenAnswer = 4;
+		  	var curQuestion = Math.Random() * 2;
+		  	
+		  	var generateExp = function(){
+				var lengths = (Math.Random() * 6) + 1;
+				for(var i = 0; i < lengths; i++){
+					var rand = Math.Random() * 1;
+					
+					question += rand === 0 ? "a" : "b"; 				
+				}
+		  	}
+		  	
+		  	var solve = function(){
+		  		var curPos = 0;
+				for (var i = 0; i < question.length; i++){
+					curPos = newPosition(curPos, question.charAt(i));			
+				}
+		  	}
+		  	
+		  	var newPostion = function(pos, curChar){
+				if (curChar === 'a'){
+					if(pos === 0)	{
+						return ;
+					}else if(pos === 1){
+						return ;
+					}else if(pos === 2){
+						return ;
+					}else{
+						return ;
+					}
+				}else{
+					if(pos === 0)	{
+						return ;
+					}else if(pos === 1){
+						return ;
+					}else if(pos === 2){
+						return ;
+					}else{
+						return ;
+					}			
+				}	  	
+		  	}
+  	</script>
+    <div class="exercise">
+      <div class="problems">
+        <div id="PreProblem2p">
+          <p class="problem">Answer TRUE or FALSE.</p>
+          <p class="question">Where does the following expression end? <var>generateExp()</var></p>
+          <div class="solution"><var>solve()</var></div>
+          <div id="chosenAnswer"><var>chosenAnswer</var></div>
+          <div class="hints">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
