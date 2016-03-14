@@ -1,4 +1,4 @@
-var jsav = new JSAV("DFABensonStage6");
+var jsav = new JSAV("DFABensonStage10");
 var dfa = new DFA(jsav);
 var textArray = [];
 
@@ -11,4 +11,8 @@ state1.addNextState(state2, ["a"]);
 state1.addNextState(state3, ["b"]);
 state2.addNextState(state1, ["a"]);
 state2.addNextState(state4, ["b"]);
+state3.addNextState(state1, ["b"]);
+state3.addNextState(state4, ["a"]);
+state4.addNextState(state2, ["b"]);
+state4.addNextState(state3, ["a"]);
 jsav.displayInit();
