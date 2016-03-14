@@ -12,7 +12,7 @@
 		  	var solutions = ["False", "", ""];
 		  	var options = [["", "", ""],["", "", ""],["", "", ""]];
 		  	
-		  	var curQuestion = Math.Random() * 2;
+		  	var curQuestion = Math.random() * 2;
   	</script>
     <div class="exercise">
       <div class="problems">
