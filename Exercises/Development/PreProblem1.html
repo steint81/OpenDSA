@@ -12,21 +12,25 @@
 		  	var solutions = ["False", "False", "False", "False", "False"];
 		  	
 		  	var curQuestion = 0;
-		  	curQuestion = Math.floor(Math.random() * 4);
+		  	var getRandQuestion = function(){
+		  		curQuestion = Math.floor(Math.random() * 4);
+		  	}
   	</script>
     <div class="exercise">
+    	<div class="vars">
+			<var id="Selected">getRandQuestion()</var>
+			<var id="Question">questions[curQuestion]</var>	
+			<var id="Solution">solutions[curQuestion]</var>	
+    	</div>
       <div class="problems">
         <div id="PreProblem1p">
           <p class="problem">Answer TRUE or FALSE.</p>
-          <p class="question"><var>questions[curQuestion]</var></p>
-          <div class="solution"><var>solutions[curQuestion]</var></div>
+          <p class="question"><var>Question</var></p>
+          <div class="solution"><var>Solution</var></div>
           <ul class="choices" data-category="true">
             <li>True</li>
             <li>False</li>
           </ul>
-          <div class="hints">
-            <p></p>
-          </div>
         </div>
       </div>
     </div>
