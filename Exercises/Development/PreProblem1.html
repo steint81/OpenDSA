@@ -11,11 +11,12 @@
 		  	var questions = ["DFA can have more than one start state.", "a", "b", "c", "d"];
 		  	var solutions = ["False", "False", "False", "False", "False"];
 		  	
-		  	var curQuestion = Math.random() * 4;
+		  	var curQuestion = 0;
+		  	curQuestion = Math.floor(Math.random() * 4);
   	</script>
     <div class="exercise">
       <div class="problems">
-        <div id="AnalProblemTF1p">
+        <div id="PreProblem1p">
           <p class="problem">Answer TRUE or FALSE.</p>
           <p class="question"><var>questions[curQuestion]</var></p>
           <div class="solution"><var>solutions[curQuestion]</var></div>

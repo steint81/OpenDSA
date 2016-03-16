@@ -206,7 +206,7 @@
     // Event handling example.
     // See "Events" section of http://jsav.io/graphicalprimitives/ for more.
     this.g.click(function() { 
-        alert(uniqueId + " clicked!");
+        //alert(uniqueId + " clicked!");
     });
 
     if (this.isStart == true) {

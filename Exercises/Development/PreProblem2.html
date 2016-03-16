@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-require="math">
+  <head>
+    <title>Understanding How to Make a DFA Part 2</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
+    <script src="../../khan-exercises/local-only/main.js" ></script>
+  </head>
+
+  <body data-height="675" data-width="950">
+  	<script>
+		  	var questions = ["DFA can have more than one start state.", "a", "b"];
+		  	var solutions = ["a", "b", "c"];
+		  	var options1 = ["b", "c", "a"];
+		  	var options2 = ["q", "w", "r"];
+		  	var options3 = ["t", "r", "w"];
+		  	
+		  	
+		  	var curQuestion = Math.floor(Math.random() * 2.9);
+  	</script>
+    <div class="exercise">
+    	<div class="vars">
+    		<var id="CorrectAnswer">solutions[curQuestion]</var>
+    		<var id="Quesion">questions[curQuestion]</var>
+ 		 </div>
+  
+      <div class="problems">
+        <div id="PreProblem2p">
+          <p class="problem">Select the correct answer.</p>
+          <p class="question"><var>Quesion</var></p>
+          <div class="solution"><var>CorrectAnswer</var></div>
+          <ul class="choices">
+            <li><var>options1[curQuestion]</var></li>
+            <li><var>options2[curQuestion]</var></li>
+            <li><var>options3[curQuestion]</var></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
