@@ -45,16 +45,21 @@
 		  		jsav = new JSAV("PreProblem3");
 				var dfa = new DFA(jsav);
 				var textArray = [];
-
+				var next = 0;				
+				
 				var state1 = dfa.addState(1, 1, "#ffddff", true, false, 0);
 				var state2 = dfa.addState(2, 2, "#ffddff", false, false, 1);
-				var state3 = dfa.addState(2, 0, "#ffddff", false, false, 2);
-				var state4 = dfa.addState(3, 1, "#ffddff", false, false, 3);
+				var state3 = dfa.addState(2.5, 0, "#ffddff", false, false, 2);
+				var state4 = dfa.addState(3, 1.5, "#ffddff", false, false, 3);
 				var stateArr = [state1, state2, state3, state4];
-				debugger;
-				arrA.push(Math.floor(Math.random() * 4));
+				
+				arrA.push(Math.floor(Math.random() * 3) + 1);
 				state1.addNextState(stateArr[arrA[0]], ["a"]);
-				arrB.push(Math.floor(Math.random() * 4));
+				next = Math.floor(Math.random() * 3) + 1;
+				while (next == arrA[0]){
+					next = Math.floor(Math.random() * 3) + 1;		
+				}
+				arrB.push(next);
 				state1.addNextState(stateArr[arrB[0]], ["b"]);
 				arrA.push(Math.floor(Math.random() * 4));
 				state2.addNextState(stateArr[arrA[0]], ["a"]);
@@ -69,8 +74,6 @@
 				arrB.push(Math.floor(Math.random() * 4));
 				state4.addNextState(stateArr[arrB[0]], ["b"]);
 				jsav.displayInit();
-				console.log(arrA);
-				console.log(arrB);
 		  	};
 		  	
 		  	var solve = function(){

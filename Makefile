@@ -293,7 +293,7 @@ Everything: min
 	python $(CONFIG_SCRIPT) config/Everything.json
 
 DFABenson: min
-	python $(CONFIG_SCRIPT) config/DFABenson.json
+	python $(CONFIG_SCRIPT) config/DFABenson.json --local
 
 AlgAnalTest: min
 	python $(CONFIG_SCRIPT) config/AlgAnalTest.json

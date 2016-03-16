@@ -8,8 +8,16 @@
 
   <body data-height="675" data-width="950">
   	<script>
-		  	var questions = ["DFA can have more than one start state.", "a", "b", "c", "d"];
-		  	var solutions = ["False", "False", "False", "False", "False"];
+		  	var questions = ["DFA can have more than one start state.", 
+		  							"DFA can have more than one end state.", 
+		  							"A DFA is used to parse grammars.",
+		  							"A DFA can only move from one state to the next, it can never stay at the same state", 
+		  							"A DFA can always move from one state to any other state"];
+		  	var solutions = ["False", 
+		  							"True", 
+		  							"True", 
+		  							"False", 
+		  							"False"];
 		  	
 		  	var curQuestion = 0;
 		  	var getRandQuestion = function(){

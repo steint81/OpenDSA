@@ -27,7 +27,19 @@
 				},
 				"exercises": {
 					"PreProblem1": {
-						"long_name": "Pre-Exercises",
+						"long_name": "Pre-Exercises 1",
+						"required": false,
+						"points": 0.0,
+						"threshold": 1.0
+					},
+					"PreProblem2": {
+						"long_name": "Pre-Exercises 2",
+						"required": false,
+						"points": 0.0,
+						"threshold": 1.0
+					},
+					"PreProblem3": {
+						"long_name": "Pre-Exercises 3",
 						"required": false,
 						"points": 0.0,
 						"threshold": 1.0

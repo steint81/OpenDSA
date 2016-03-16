@@ -133,7 +133,19 @@ Finally, the last line we will draw coming from state 4 will be for A, which wil
 
 
 
-Practice Exercise
------------------
+Practice Exercise 1
+-------------------
 
 .. avembed:: Exercises/Development/PreProblem1.html ka
+
+
+Practice Exercise 2
+-------------------
+
+.. avembed:: Exercises/Development/PreProblem2.html ka
+
+
+Practice Exercise 3
+-------------------
+
+.. avembed:: Exercises/Development/PreProblem3.html ka
